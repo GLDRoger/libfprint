@@ -675,7 +675,7 @@ synatlsmoc_set_print_data (FpPrint *print, Db2Id template_id, FpUserId fp_user_i
 
   g_object_set (print, "description", user_id_safe, NULL);
 
-  GVariant *uid = g_variant_new_fixed_array (G_VARIANT_TYPE_BYTE, user_id_safe,
+  GVariant *uid = g_variant_new_fixed_array (G_VARIANT_TYPE_BYTE, fp_user_id,
                                              sizeof (FpUserId), 1);
   GVariant *tid = g_variant_new_fixed_array (G_VARIANT_TYPE_BYTE, template_id,
                                              sizeof (Db2Id), 1);
